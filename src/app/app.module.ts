@@ -12,7 +12,6 @@ import {HttpModule} from '@angular/http';
 
 import {removeNgStyles, createNewHosts, createInputTransfer} from '@angularclass/hmr';
 
-import {Store} from '@ngrx/store';
 
 import {APP_DECLARATIONS} from './app.declarations';
 import {APP_ENTRY_COMPONENTS} from './app.entry-components';
