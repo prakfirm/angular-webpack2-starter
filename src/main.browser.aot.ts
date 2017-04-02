@@ -1,6 +1,6 @@
 import './polyfills.browser.aot';
 import './rxjs.imports';
-declare var ENV: string;
+declare let ENV: string;
 
 import { enableProdMode } from '@angular/core';
 import { platformBrowser } from '@angular/platform-browser';

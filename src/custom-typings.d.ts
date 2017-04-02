@@ -21,15 +21,21 @@ import * as _ from 'lodash'
  *
  */
 
+declare let GoogleMapsLoader: any;
+declare let L: any;
+declare let AmCharts: any;
+declare let Chart: any;
+declare let Chartist: any;
+
 // Extra variables that live on Global that will be replaced by webpack DefinePlugin
-declare var AOT: boolean;
-declare var ENV: string;
-declare var HMR: boolean;
-declare var HOST: string;
-declare var PORT: number;
-declare var STORE_DEV_TOOLS: string;
-declare var System: SystemJS;
-declare var UNIVERSAL: boolean;
+declare let AOT: boolean;
+declare let ENV: string;
+declare let HMR: boolean;
+declare let HOST: string;
+declare let PORT: number;
+declare let STORE_DEV_TOOLS: string;
+declare let System: SystemJS;
+declare let UNIVERSAL: boolean;
 
 interface SystemJS {
   import: (path?: string) => Promise<any>;

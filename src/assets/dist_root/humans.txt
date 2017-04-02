@@ -1,0 +1,9 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# THANKS
+
+  <name>
+  Pramod Kumar Raghav -- @dealsencash.com
+  Deals Encash -- @DealsEncash
+

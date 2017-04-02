@@ -1,36 +1,15 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-
-import { views } from './app-nav-views';
-import { MOBILE } from './services/constants';
+import {Component, ViewEncapsulation} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {GlobalState} from '@deals-encash/common';
 
 @Component({
-  selector: 'my-app',
-  styleUrls: ['./app.component.css'],
-  templateUrl: './app.component.html'
+    selector: 'deals-encash-root',
+    encapsulation: ViewEncapsulation.None,
+    templateUrl: './app.component.html'
 })
 export class AppComponent {
-  showMonitor = (ENV === 'development' && !AOT &&
-    ['monitor', 'both'].includes(STORE_DEV_TOOLS) // set in constants.js file in project root
-  );
-  mobile = MOBILE;
-  sideNavMode = MOBILE ? 'over' : 'side';
-  views = views;
-
-  constructor(
-    public route: ActivatedRoute,
-    public router: Router
-  ) { }
-
-  activateEvent(event) {
-    if (ENV === 'development') {
-      console.log('Activate Event:', event);
+    constructor(private _state: GlobalState,
+                public route: ActivatedRoute,
+                public router: Router) {
     }
-  }
-
-  deactivateEvent(event) {
-    if (ENV === 'development') {
-      console.log('Deactivate Event', event);
-    }
-  }
 }
